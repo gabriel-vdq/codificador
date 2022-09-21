@@ -1,0 +1,23 @@
+header {
+    height: 50px;
+    padding: 20px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.imgLogo {
+    position: absolute;
+}
+
+.imagemRetorno {
+    position: relative;
+    top: 150px;
+    left: 900px;
+    max-width: 50%;
+    max-height: 50%;
+}
