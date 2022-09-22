@@ -1,13 +1,11 @@
 function puxarTexto() {
-
-    return "";
+    var textoEntrada = document.querySelector(".textoAcao");
+    var texto = input.textoEntrada;
+    return texto;
 }
 
-
-var teste = "krAstén";
-
 function codificacao() {
-    var texto = teste;
+    var texto = puxarTexto();
     var tamanho = texto.length;
     var i = 0;
    
@@ -36,7 +34,7 @@ function codificacao() {
         tamanho = texto.length;
        
     }
-    return console.log(texto);
+    alert(texto);
 }
 
 var teste2 = "Enter imes ai ober ufat";
