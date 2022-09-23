@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./reset css/reset.css"> 
     <link rel="stylesheet" href="./css/style.css"> 
-    <script src="js/script.js"></script>
     <title>Codificador</title>
 </head>
 <body>
@@ -19,28 +19,27 @@
         <main>
             <section class="entrada">
                 
-                    <label for="textoAcao"></label>
-                    <textarea cols="70" rows="3" id="textoAcao" class="inputPadrao" placeholder="Digite aqui" required></textarea>   
+                    <label for="userText"></label>
+                    <textarea cols="70" rows="3" id="userText" class="inputPadrao" id="userText" placeholder="Digite aqui" required></textarea>   
                 
 
                 <div class="botoes">
-                    <button type="submit" class="codificar" onclick="codificacao()">Codificar</button>
-                    <input type="submit" value="Descodificar" class="descodificar">
+                    <button type="submit" class="codificar" onclick="addTextoCod()">Codificar</button>
+                    <input type="submit" value="Descodificar" class="descodificar" onclick="addTextoDescod()">
                 </div>
             </section>
 
             <section class="saida">
                 <div class="retangulo">
                     <img class="meninoImagem" src="imagens/High quality products 1 1.png" alt="">
-                    <p class="texto1">Nenhuma mensagem encontrada</p>
-                    <p class="texto2">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    <p class="texto1" id="textoSumir">Nenhuma mensagem encontrada</p>
+                    <p class="texto2" id="textoRetorno">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    <input type="submit" value="Copiar" class="copiar" onclick="copiar()">
                 </div>
 
             </section>
         </main>
 
-        <footer>
-
-        </footer>
+        <script src="js/script.js"></script>
 </body>
 </html>

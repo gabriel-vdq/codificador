@@ -1,6 +1,5 @@
 function puxarTexto() {
-    var textoEntrada = document.querySelector(".textoAcao");
-    var texto = input.textoEntrada;
+    var texto = document.getElementById("userText").value;
     return texto;
 }
 
@@ -34,21 +33,50 @@ function codificacao() {
         tamanho = texto.length;
        
     }
-    alert(texto);
+
+   return texto;
 }
 
 var teste2 = "Enter imes ai ober ufat";
 
 function decodificacao() {
-    var texto = teste2;
-    var tamanho = texto.length;
+    var texto = puxarTexto();
+    var tamanhoTexto = texto.length;
     var i = 0;
     
-    texto = texto.replace("enter", "a");
-    texto = texto.replace("imes", "e");
-    texto = texto.replace("ai", "i");
-    texto = texto.replace("ober", "o");
-    texto = texto.replace("ufat", "u");
+    while(i < tamanhoTexto) {
+        texto = texto.replace("enter", "a");
+        texto = texto.replace("imes", "e");
+        texto = texto.replace("ai", "i");
+        texto = texto.replace("ober", "o");
+        texto = texto.replace("ufat", "u");
+        
+        i++;
+        tamanhoTexto = texto.length;
+    }
 
-    return console.log(texto);
+    return texto;
+}
+
+function addTextoCod() {
+    document.getElementById("textoSumir").innerHTML = "";
+    document.getElementById("textoRetorno").innerHTML = codificacao();
+}
+
+function addTextoDescod() {
+    document.getElementById("textoSumir").innerHTML = "";
+    document.getElementById("textoRetorno").innerHTML = decodificacao();
+}
+
+function copiar() {
+    var textoCopiar = document.getElementById("textoRetorno").textContent;
+    navigator.clipboard.writeText(textoCopiar);
+
+    alert("Copiado com sucesso!");
+}
+
+function teste() {
+    navigator.clipboard.readText().then((text)=> {
+        alert('text');
+    });
 }
